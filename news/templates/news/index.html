@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mega-News</title>
+    <link rel="stylesheet" href="{% static 'news/style.css' %}">
+</head>
+<body>
+    <h1>Mega News</h1>
+
+    <h3>News:</h3>
+
+    <ul>
+        {% for new in news %}
+            <li>{{ new.title }} (author: {{new.author}})<br>
+            <span style="font-size:70%">{{new.published}}</span><br><img src="{{ new.img.url }}" alt="">
+            </li>
+  
+          
+        {% endfor %}
+    </ul>
+
+ 
+</body>
+</html>
